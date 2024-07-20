@@ -29,9 +29,9 @@ def insert(self, data):
 #STEP - 4: PRINTING THE LINKEDLIST
 def printList(self):
     temp = self.head
-        while(temp):
-            print(temp.data, end = ' ')
-            temp = temp.nextNode
+    while temp:
+        print(temp.data, end= ' ')
+        temp = temp.nextNode
 
 
 #STEP - 5: COMPLETING THE LINKEDLIST AND PRINTING IT
