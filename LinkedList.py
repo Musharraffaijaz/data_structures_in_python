@@ -49,10 +49,10 @@ class LinkedList:
         newNode.head = newNode
 
     def printList(self):
-    temp = self.head
-    while(temp):
-        print(temp.data, end = ' ')
-        temp = temp.next
+        temp = self.head
+        while temp:
+            print(temp.data, end= ' ')
+            temp = temp.nextNode
     
 # Create a linkedList    
 linkedList = LinkedList()
