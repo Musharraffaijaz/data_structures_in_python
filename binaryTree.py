@@ -22,7 +22,10 @@ class BinaryTree:
             if currentNode.right is None:
                 currentNode.right = Node(value)
             else:
-                self.addNode(currentNode.right, value)
+                self.addNode(currentNode.right, value)     
+    def add(self, value):
+        self.addNode(self.root, value)
+
     def in_order_traverse(self, Node, elements=[]):
         #left --> root --> right
         if Node:
@@ -30,9 +33,22 @@ class BinaryTree:
             elements.append(Node.data)
             self.in_order_traverse(Node.right, elements)
         return elements
-        
-    def add(self, value):
-        self.addNode(self.root, value)
+    
+    def pre_order_traverse(self, Node, elements =[]):
+         # Pre-order Traversal (root -> left -> right)
+        if Node:
+            elements.append(Node.data)
+            self.pre_order_traverse(Node.left, elements)
+            self.pre_order_traverse(Node.right, elements)
+        return elements
+
+        # Post-order Traversal (left -> right -> root)
+    def post_order_traverse(self, Node, elements=[]):
+        if node:
+            self.post_order_traverse(Node.left, elements)
+            self.post_order_traverse(Node.right, elements)
+            elements.append(Node.data)
+        return elements
         
         
 if __name__ == "__main__":
